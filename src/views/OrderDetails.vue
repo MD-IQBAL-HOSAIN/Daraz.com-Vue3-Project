@@ -8,11 +8,12 @@
                         <span class="card-text">Date: {{ order.date }}</span><br>
                         <span class="card-text">Name: {{ order.name }}</span><br>
                         <span class="card-text">Phone: {{ order.phone }}</span><br>
+                        <span class="card-text">payment: {{ order.payment}}</span><br>
                     </div>
                     <div class="col-md-8 order-md-last">
                         <img src="/assets/logo.png" alt="" height="60" width="200" style="border-radius: 30px;"><br>
                         <h3>Daraz.com</h3>
-                        <small>shop address: Mirpur-10</small><br>
+                        <small>shop address: Mirpur-10, Dhaka</small><br>
                         <small>shop contact: 0123456789</small><br>
                         <small>shop email: daraz@gmail.com</small>
                     </div>

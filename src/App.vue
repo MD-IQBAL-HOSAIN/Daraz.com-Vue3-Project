@@ -3,8 +3,9 @@
   <div class="container-fluid" id="app">
     <nav class="navbar navbar-expand-lg" style="background-color: orange; border-radius: 30px;">
       <div class="container">
-        <img src="/assets/logo.png" alt="" height="60" width="150" style="border-radius: 30px;">
-        <router-link class="navbar-brand text-white" to="/">Daraz.com</router-link>
+        <router-link to="/"><img src="/assets/logo.png" alt="" height="60" width="150" style="border-radius: 30px;"></router-link>
+        &nbsp;&nbsp;&nbsp;
+        <router-link class="navbar-brand text-white" to="/"><b>Daraz.com</b></router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>

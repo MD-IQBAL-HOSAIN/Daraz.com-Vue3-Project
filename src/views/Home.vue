@@ -1,40 +1,126 @@
-<!-- src/views/Home.vue -->
-<!-- <template>
-  <div class="home">
-    <h1>Welcome to our E-commerce Store</h1>
-    <p>Check out our amazing products!</p>
-    <router-link to="/products" class="btn btn-primary">Shop Now</router-link>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'Home'
-}
-</script> -->
-
 <template>
-  <div class="container-fluid home-page">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="/assets/aa.avif" alt="Shopping Cart" class="img-fluid rounded">
+  <div class="container-fluid" style="background-color:antiquewhite; border-radius: 10px">
+    <h2 class="text-center text-primary">Welcome to Daraz.com</h2>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
+      data-bs-wrap="true">
+      <div class="carousel-inner" style="max-width: 100%;">
+        <div class="carousel-item active">
+          <img src="/assets/cc.webp" class="d-block" alt="Shopping Cart" style=" height: 500px; width: 100%;">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/dd.webp" class="d-block" alt="Second Slide" style=" height: 500px; width: 100%;">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/ee.png" class="d-block" alt="Third Slide" style=" height: 500px; width: 100%;">
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2 class="text-center">Welcome to Daraz.com</h2>
-        <p>We are online store providing you with the best products at the best price.</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quos minima totam. Dolorem qui doloremque non, veniam natus autem. Mollitia qui vel voluptatum, voluptas fugit eum distinctio at. Sed, nam!
-        Ratione nam, facere saepe voluptates eveniet amet libero atque corporis doloribus aperiam consectetur unde dolore, nihil aliquam recusandae quos! Adipisci ex dolorum nostrum officiis laborum unde veniam consectetur odio dolor.
-        Saepe autem fugit ipsa alias praesentium blanditiis corrupti ea vel unde soluta. Sint nihil deserunt commodi et doloribus, explicabo atque ullam sit distinctio quia unde soluta incidunt recusandae dignissimos deleniti.
-        Veniam saepe quod culpa nemo debitis, corrupti voluptatibus reprehenderit magnam, laborum provident enim consequuntur doloribus nulla necessitatibus facilis. Saepe dolore quaerat amet sit incidunt! Voluptas ipsam temporibus possimus. Sed, nihil?
-        Rerum veritatis sequi modi dolorum maiores nesciunt odit repudiandae iste beatae inventore nostrum dicta nulla, repellat quisquam ullam, vel error? Velit cumque tempora officia placeat magnam perspiciatis odit culpa. Et!</p>
-        <router-link to="/products" class="btn btn-primary">Shop Now</router-link>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <div class="container">
+  <h3 class="text-center text-primary my-4">Popular Products</h3>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="/assets/bb.jpg" class="card-img-top" alt="Product Image">
+        <div class="card-body text-center">
+          <p class="card-text">Price: $110</p>
+        </div>
       </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="/assets/p1.webp" class="card-img-top" alt="Product Image">
+        <div class="card-body text-center">
+          <p class="card-text">Price: $100</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="/assets/p3.jpeg" class="card-img-top" alt="Product Image">
+        <div class="card-body text-center">
+          <p class="card-text">Price: $200</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="/assets/p4.webp" class="card-img-top" alt="Product Image">
+        <div class="card-body text-center">
+          <p class="card-text">Price: $50</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="/assets/p5.webp" class="card-img-top" alt="Product Image">
+        <div class="card-body text-center">
+          <p class="card-text">Price: $190</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="/assets/p2.jpg" class="card-img-top" alt="Product Image">
+        <div class="card-body text-center">
+          <p class="card-text">Price: $150</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">&copy; 2024 Company, Inc</p>
+      </footer>
     </div>
   </div>
 </template>
 
-<style>
-  .home-page {
-    padding-top: 50px;
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  data() {
+    return {
+      dummyProducts: [
+        { id: 1, title: 'Product 1', price: 10, image: '/assets/aa.avif' },
+        { id: 2, title: 'Product 2', price: 20, image: '/assets/aa.avif' },
+        { id: 3, title: 'Product 3', price: 30, image: '/assets/aa.avif' }
+      ]
+    }
+  },
+  methods: {
+    ...mapActions(['addToCart'])
   }
+}
+</script>
+
+<style>
+.home-page {
+  padding-top: 50px;
+}
 </style>

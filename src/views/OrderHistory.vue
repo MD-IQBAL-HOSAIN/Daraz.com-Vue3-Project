@@ -13,6 +13,7 @@
           <th>Customer Name</th>
           <th>Phone</th>
           <th>Address</th>
+          <th>Payment</th>
           <th>Total</th>
           <th>Actions</th>
         </tr>
@@ -25,6 +26,7 @@
           <td>{{ order.name }}</td>
           <td>{{ order.phone }}</td>
           <td>{{ order.address }}</td>
+          <td>{{ order.payment }}</td>
           <td>$ {{ order.total }}</td>
           <td>
             <router-link :to="{ name: 'OrderDetails', params: { id: order.id } }" class="btn btn-primary">Invioce</router-link>
