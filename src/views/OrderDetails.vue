@@ -1,7 +1,5 @@
 <template>
-    <h2 class="text-center">Invoice</h2>
-    <hr>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mt-2">
         <div v-if="order" class="card">
             <div class="card-body">
                 <div class="row align-items-center">
@@ -22,7 +20,6 @@
                 <hr>
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- <h5 class="card-title">Items</h5> -->
                         <table class="table table-striped">
                             <thead>
                                 <tr>
