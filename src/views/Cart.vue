@@ -42,6 +42,9 @@
       </div>
       <div class="col-md-4">
         <h2 class="text-center">Place Order</h2>
+        <div class="alert alert-success mb-3" role="alert" v-if="orderPlaced">
+          Order placed successfully!
+        </div>
         <form @submit.prevent="submitOrder">
           <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -61,7 +64,7 @@
           </div>
           <div class="mb-3">
             <label for="payment" class="form-label">Payment</label>
-            <select class="form-control" id="payment" v-model="order.payment" required>
+            <select class="form-select" id="payment" v-model="order.payment" required>
               <option value="bkash">Bkash</option>
               <option value="nagad">Nagad</option>
               <option value="rocket">Rocket</option>
@@ -75,7 +78,7 @@
       </div>
     </div>
   </div>
-</template>Cart
+</template>
 
 <script>
 import { mapState, mapGetters, mapActions } from 'vuex'
@@ -90,7 +93,8 @@ export default {
         phone: '',
         address: '',
         payment: ''
-      }
+      },
+      orderPlaced: false
     }
   },
   computed: {
@@ -101,7 +105,12 @@ export default {
     ...mapActions(['removeFromCart', 'clearCart', 'decreaseQuantity', 'increaseQuantity', 'placeOrder']),
     submitOrder() {
       this.placeOrder(this.order)
-      alert('Order placed successfully!')
+      .then(() => {
+        this.orderPlaced = true
+        setTimeout(() => {
+          this.orderPlaced = false
+        }, 5000)
+      })
       this.order = { name: '', email: '', phone: '', address: '',payment: '' }
     },
     decreaseQuantity(productId) {

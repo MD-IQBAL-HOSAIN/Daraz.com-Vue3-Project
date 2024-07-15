@@ -1,6 +1,7 @@
 // src/store.js
 import { createStore } from 'vuex'
 import axios from 'axios'
+import createPersistedState from 'vuex-persistedstate'
 
 export default createStore({
   state: {
@@ -32,11 +33,8 @@ export default createStore({
     },
     clearCart(state) {
       state.cart = []
-    },
-    placeOrder(state, order) {
-      state.orders.push(order)
     }
-  },
+    },
   actions: {
     async fetchProducts({ commit }) {
       try {
@@ -69,6 +67,7 @@ export default createStore({
       commit('clearCart')
     }
   },
+
   getters: {
     cartTotal: state => {
       return state.cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)
@@ -77,4 +76,9 @@ export default createStore({
       return state.orders
     }
   }
-})
+  ,
+  plugins: [createPersistedState({
+    paths: ['orders']
+  })]
+}
+)
