@@ -33,8 +33,11 @@ export default createStore({
     },
     clearCart(state) {
       state.cart = []
-    }
     },
+    placeOrder(state, order) {
+      state.orders.push(order)
+    }
+  },
   actions: {
     async fetchProducts({ commit }) {
       try {
@@ -54,7 +57,6 @@ export default createStore({
       commit('clearCart')
     },
     placeOrder({ commit, state }, orderDetails) {
-      // console.log(orderDetails)
       const order = {
         id: new Date().getTime(),
         ...orderDetails,
@@ -67,7 +69,6 @@ export default createStore({
       commit('clearCart')
     }
   },
-
   getters: {
     cartTotal: state => {
       return state.cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2)
@@ -75,10 +76,8 @@ export default createStore({
     orders: state => {
       return state.orders
     }
-  }
-  ,
+  },
   plugins: [createPersistedState({
     paths: ['orders']
   })]
-}
-)
+})
