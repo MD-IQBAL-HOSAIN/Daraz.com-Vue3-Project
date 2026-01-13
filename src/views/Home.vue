@@ -27,7 +27,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="container-fluid">
   <h3 class="text-center text-primary my-4">Popular Products</h3>
   <div class="row">
     <div class="col-md-4 mb-4">
@@ -48,7 +48,7 @@
     </div>
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="/assets/p3.jpeg" class="card-img-top" alt="Product Image">
+        <img src="/assets/p3.jpg" class="card-img-top" alt="Product Image">
         <div class="card-body text-center">
           <p class="card-text">Price: $200</p>
         </div>
